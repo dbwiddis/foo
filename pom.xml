@@ -40,6 +40,19 @@
                 <version>${maven-compiler-plugin.version}</version>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>de.sormuras.junit</groupId>
                 <artifactId>junit-platform-maven-plugin</artifactId>
                 <version>${junit-platform-maven-plugin.version}</version>
